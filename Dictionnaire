@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        Dictionary<char, string> monDictionnaire = new Dictionary<char, string>();
+
+        monDictionnaire['a'] = "telepho,e";
+        monDictionnaire['b'] = "orange";
+        monDictionnaire['c'] = "voiture";
+
+        Console.WriteLine("Mots associés aux lettres avant la suppression :");
+        foreach (var paire in monDictionnaire)
+        {
+            Console.WriteLine($"{paire.Key}: {paire.Value}");
+        }
+
+        monDictionnaire.Remove('c');
+
+        Console.WriteLine("la suppression :");
+        foreach (var paire in monDictionnaire)
+        {
+            Console.WriteLine($"{paire.Key}: {paire.Value}");
+        }
+    }
+}
